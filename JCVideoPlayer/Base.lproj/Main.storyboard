@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-vW-EA1">
+                                <rect key="frame" x="70" y="54" width="460" height="259"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2i1-vW-EA1" secondAttribute="height" multiplier="16:9" id="DKg-07-7vb"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-z8-a5O">
+                                <rect key="frame" x="120" y="333" width="360" height="177"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vly-cK-i3n">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="177"/>
+                                        <state key="normal" image="2"/>
+                                        <connections>
+                                            <action selector="playButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tg5-af-GI4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-VW-IQh">
+                                        <rect key="frame" x="180" y="0.0" width="180" height="177"/>
+                                        <state key="normal" image="1"/>
+                                        <connections>
+                                            <action selector="stopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wp7-Oa-jcR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5dY-VW-IQh" firstAttribute="height" secondItem="Vly-cK-i3n" secondAttribute="height" id="YIE-Il-s1j"/>
+                                    <constraint firstItem="5dY-VW-IQh" firstAttribute="width" secondItem="Vly-cK-i3n" secondAttribute="width" id="Zzb-8M-IB5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ck8-z8-a5O" secondAttribute="bottom" constant="90" id="1mU-q9-rPP"/>
+                            <constraint firstItem="ck8-z8-a5O" firstAttribute="top" secondItem="2i1-vW-EA1" secondAttribute="bottom" constant="20" id="2cC-hm-BbM"/>
+                            <constraint firstItem="Vly-cK-i3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="FRx-cs-U2E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2i1-vW-EA1" secondAttribute="trailing" constant="50" id="Gwr-3n-ev6"/>
+                            <constraint firstItem="ck8-z8-a5O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZQk-E1-l49"/>
+                            <constraint firstItem="2i1-vW-EA1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="aAm-EW-kVS"/>
+                            <constraint firstItem="2i1-vW-EA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="feT-yE-ejF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="2i1-vW-EA1" id="XcK-xa-FPh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="50" height="50"/>
+        <image name="2" width="50" height="50"/>
+    </resources>
+</document>
